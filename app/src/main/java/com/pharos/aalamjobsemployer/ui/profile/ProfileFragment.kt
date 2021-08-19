@@ -20,6 +20,7 @@ import com.pharos.aalamjobsemployer.ui.auth.utils.UserListener
 import com.pharos.aalamjobsemployer.ui.base.BaseFragment
 import com.pharos.aalamjobsemployer.utils.visible
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -38,10 +39,12 @@ class ProfileFragment : BaseFragment<AuthViewModel, FragmentProfileBinding, Auth
 
         binding.btnAboutCompany.setOnClickListener {
             val bundle = Bundle()
-            userResponse?.id?.let { it1 ->
-                bundle.putInt("idOfCompany", it1)
-                findNavController().navigate(R.id.companyInfoFragment, bundle)
+            val id = userResponse?.organization?.id
+            if (id != null) {
+                bundle.putInt("idOfCompany", id)
             }
+                findNavController().navigate(R.id.companyInfoFragment, bundle)
+
         }
 
         binding.ivSettings.setOnClickListener {
