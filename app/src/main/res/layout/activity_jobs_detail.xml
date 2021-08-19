@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.vacancies.JobsDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/jobs_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="5dp">
+
+        <ImageView
+            android:id="@+id/auth_toolbar_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_green"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/iv_backpressed"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_backpressed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:padding="8dp"
+            android:src="@drawable/vector_backpressed_green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jobs_toolbar">
+
+        <RelativeLayout
+            android:id="@+id/job_detail_top_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/job_logo_company"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/vector_no_logo" />
+
+            <RelativeLayout
+                android:id="@+id/job_head_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/job_logo_company">
+
+                <TextView
+                    android:id="@+id/job_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:text=""
+                    android:textColor="#5A5A67"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:id="@+id/job_location_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/job_title"
+                    android:layout_marginTop="6dp">
+
+                    <TextView
+                        android:id="@+id/job_name_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito"
+                        android:text=""
+                        android:textColor="#5A5A67"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/job_name_company"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/job_name_location"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/nunito"
+                        android:text=""
+                        android:textColor="#5A5A67"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/job_date_container"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:id="@+id/jobs_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="26dp"
+                    android:fontFamily="@font/nunito"
+                    android:text=""
+                    android:textColor="#F3A683"
+                    android:textSize="11sp" />
+
+
+
+            </RelativeLayout>
+
+            <!--                <TextView-->
+            <!--                    android:id="@+id/jobs_salary"-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_above="@id/job_date_container"-->
+            <!--                    android:layout_alignParentEnd="true"-->
+            <!--                    android:layout_alignParentRight="true"-->
+            <!--                    android:fontFamily="@font/nunito"-->
+            <!--                    android:text="30000-40000c"-->
+            <!--                    android:textSize="14sp" />-->
+
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/job_description_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/job_detail_top_container"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="40dp">
+
+            <TextView
+                android:textStyle="bold"
+                android:id="@+id/tv_pos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/txt_position"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tv_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_pos"
+                android:fontFamily="@font/nunito"
+                android:text=" "
+                android:textSize="12sp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_below="@id/tv_pos"
+                android:id="@+id/tv_sch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/txt_schedule"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_below="@id/tv_position"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tv_schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_sch"
+                android:fontFamily="@font/nunito"
+                android:text=" "
+                android:textSize="12sp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_below="@id/tv_sch"
+                android:id="@+id/tv_sal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/txt_salary"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_below="@id/tv_schedule"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/tv_salary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tv_sal"
+                android:fontFamily="@font/nunito"
+                android:text=""
+                android:textSize="12sp" />
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tv_sal"
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/txt_description"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_desc"
+                android:fontFamily="@font/nunito"
+                android:text=" "
+                android:textSize="12sp" />
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tv_description"
+                android:id="@+id/tv_resp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/txt_responsibilities"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_responsibilities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_resp"
+                android:fontFamily="@font/nunito"
+                android:text=" "
+                android:textSize="12sp" />
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/tv_responsibilities"
+                android:id="@+id/tv_req"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/txt_requirements"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_requirements"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_req"
+                android:fontFamily="@font/nunito"
+                android:text=" "
+                android:textSize="12sp" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="30dp"
+    android:paddingVertical="50dp"
+    android:paddingHorizontal="28dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:textSize="16sp"
+        android:fontFamily="@font/nunito"
+        android:gravity="center_horizontal"
+        android:id="@+id/tv_access"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/it_seems_you_haven_t_added_your_organization_yet"/>
+
+    <LinearLayout
+        android:layout_below="@id/tv_access"
+        android:layout_marginTop="70dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:id="@+id/btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btn_already_have"
+        android:text="@string/has_already"
+        android:layout_marginEnd="7dp"
+        style="@style/style_btn_white"/>
+    <Button
+        android:id="@+id/btn_add_company"
+        android:layout_marginStart="7dp"
+        android:text="@string/add_company"
+        style="@style/style_btn_green"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

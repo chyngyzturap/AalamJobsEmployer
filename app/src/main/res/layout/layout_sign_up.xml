@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="30dp"
+    android:paddingVertical="50dp"
+    android:paddingHorizontal="28dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:textSize="16sp"
+        android:fontFamily="@font/nunito"
+        android:gravity="center_horizontal"
+        android:id="@+id/tv_access"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/please_sign_up_to_get_access"/>
+
+    <Button
+        android:id="@+id/btn_go_sign_up"
+        android:layout_marginTop="75dp"
+        android:layout_below="@id/tv_access"
+        android:text="@string/txt_login_sign_up"
+        style="@style/style_btn_green"/>
+
+
+
+</RelativeLayout>

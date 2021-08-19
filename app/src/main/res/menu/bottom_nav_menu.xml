@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_jobs"
+        android:icon="@drawable/jobs_selector"
+        android:title="@string/jobs_text" />
+
+    <item
+        android:id="@+id/nav_favorites"
+        android:icon="@drawable/favorites_selector"
+        android:title="@string/favorites_text" />
+
+    <item
+        android:id="@+id/nav_applied"
+        android:icon="@drawable/applied_selector"
+        android:title="@string/applied_text" />
+
+    <item
+        android:id="@+id/nav_resume"
+        android:icon="@drawable/resume_selector"
+        android:title="@string/resume_text" />
+
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/profile_selector"
+        android:title="@string/profile_text" />
+
+
+</menu>

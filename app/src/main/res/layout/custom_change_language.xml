@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_quit">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/topButtonDialog"
+            android:layout_width="42dp"
+            android:layout_height="6dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="2dp"
+            app:cardBackgroundColor="#cecece"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="0dp" />
+
+
+        <TextView
+            android:layout_below="@id/topButtonDialog"
+            android:id="@+id/kyrgyzButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="Кыргызча"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            app:drawableLeftCompat="@drawable/lang_kyrgyz_flag" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_below="@+id/turkishButton"
+            android:background="#cecece" />
+
+        <TextView
+            android:id="@+id/englishButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/turkishButton"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="English"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            app:drawableLeftCompat="@drawable/lang_english_flag" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_below="@+id/englishButton"
+            android:background="#cecece" />
+
+        <TextView
+            android:id="@+id/turkishButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/englishButton"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="Türkçe"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            app:drawableLeftCompat="@drawable/lang_turkish_flag" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.4dp"
+            android:layout_below="@+id/turkishButton"
+            android:background="#cecece" />
+
+
+        <TextView
+            android:id="@+id/russianButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/englishButton"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="Русский"
+            android:textColor="@color/black"
+            android:textSize="19sp"
+            app:drawableLeftCompat="@drawable/lang_russian_flag" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

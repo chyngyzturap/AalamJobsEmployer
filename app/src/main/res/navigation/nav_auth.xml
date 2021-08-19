@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/nav_login">
+
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.pharos.aalamjobsemployer.ui.auth.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_nav_login_to_nav_register"
+            app:destination="@id/nav_register" />
+        <action
+            android:id="@+id/action_nav_login_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_register"
+        android:name="com.pharos.aalamjobsemployer.ui.auth.register.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_nav_register_to_nav_otp"
+            app:destination="@id/nav_otp" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_otp"
+        android:name="com.pharos.aalamjobsemployer.ui.auth.register.OtpFragment"
+        android:label="fragment_otp"
+        tools:layout="@layout/fragment_otp" />
+
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.pharos.aalamjobsemployer.ui.auth.password.ForgotPasswordFragment"
+        android:label="fragment_forgot_password"
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPasswordFragment_to_passwordOtpFragment"
+            app:destination="@id/passwordOtpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newPasswordFragment"
+        android:name="com.pharos.aalamjobsemployer.ui.auth.password.NewPasswordFragment"
+        android:label="fragment_new_password"
+        tools:layout="@layout/fragment_new_password" />
+    <fragment
+        android:id="@+id/passwordOtpFragment"
+        android:name="com.pharos.aalamjobsemployer.ui.auth.password.PasswordOtpFragment"
+        android:label="fragment_password_otp"
+        tools:layout="@layout/fragment_password_otp" >
+        <action
+            android:id="@+id/action_passwordOtpFragment_to_newPasswordFragment"
+            app:destination="@id/newPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/companyInfoFragment2"
+        android:name="com.pharos.aalamjobsemployer.ui.job.company.CompanyInfoFragment"
+        android:label="fragment_company_info"
+        tools:layout="@layout/fragment_company_info" />
+</navigation>

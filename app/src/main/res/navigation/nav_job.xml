@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_cv"
+    app:startDestination="@id/vacancyInfoFragment">
+
+    <fragment
+        android:id="@+id/vacancyInfoFragment"
+        android:name="com.pharos.aalamjobsemployer.ui.job.vacancy.VacancyInfoFragment"
+        android:label="fragment_vacancy_info"
+        tools:layout="@layout/fragment_vacancy_info" />
+</navigation>

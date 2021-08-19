@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_editor_absoluteX="1dp"
+    app:layout_editor_absoluteY="1dp"
+    tools:context=".ui.job.company.CompanyInfoFragment">
+
+    <RelativeLayout
+        android:id="@+id/contacts_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/job_application_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="5dp">
+
+        <ImageView
+            android:id="@+id/auth_toolbar_title"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_green"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_backpressed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:padding="8dp"
+            android:src="@drawable/vector_backpressed_green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito"
+            android:text="About Company"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_below="@id/job_application_toolbar"
+            android:id="@+id/contact_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical"
+            android:paddingHorizontal="40dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_company_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/nunito"
+                android:hint="@string/company_name"
+                android:textSize="14sp"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:helperText="@string/txt_required"
+                app:helperTextTextColor="#D80027">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_company_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_company_name"
+                    android:layout_marginTop="6dp"
+                    android:lines="1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_industry"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/nunito"
+                android:hint="@string/industry_e_g_it_hospitality_etc"
+                android:textSize="14sp"
+                app:errorEnabled="true"
+                app:endIconDrawable="@drawable/vector_arrow_down"
+                app:endIconMode="custom"
+                app:helperText="@string/txt_required"
+                app:helperTextTextColor="#D80027">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:drawableEnd="@drawable/vector_arrow_down"
+                    android:id="@+id/et_industry"
+                    android:layout_width="match_parent"
+                    android:editable="false"
+                    tools:ignore="Deprecated"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lines="1"
+                    android:textSize="14sp"
+                     />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_company_website"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_below="@id/tv_company_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/nunito"
+                android:hint="@string/company_website_if_available"
+                android:textSize="14sp"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:helperText="@string/txt_required"
+                app:helperTextTextColor="#D80027">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_company_website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lines="1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_company_summary"
+                android:layout_below="@id/tv_company_website"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/nunito"
+                android:hint="@string/company_summary_description_of_the_company_industry_and_type_of_a_workplace"
+                android:textSize="14sp"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:helperText="@string/txt_required"
+                app:helperTextTextColor="#D80027">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_company_summary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lines="1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_company_address"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/nunito"
+                android:layout_below="@id/tv_company_summary"
+                android:hint="@string/company_street_address"
+                android:textSize="14sp"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:helperText="@string/txt_required"
+                app:helperTextTextColor="#D80027">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_company_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lines="1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_company_city"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/nunito"
+                android:layout_below="@id/tv_company_address"
+                android:hint="@string/city_location_of_company"
+                android:textSize="14sp"
+                app:endIconDrawable="@drawable/vector_arrow_down"
+                app:endIconMode="custom"
+                app:errorEnabled="true"
+                app:helperText="@string/txt_required"
+                app:helperTextTextColor="#D80027">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:drawableEnd="@drawable/vector_arrow_down"
+                    android:id="@+id/et_company_city"
+                    android:layout_width="match_parent"
+                    android:editable="false"
+                    tools:ignore="Deprecated"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lines="1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_company_country"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/nunito"
+                android:layout_below="@id/tv_company_city"
+                android:hint="@string/country_location_of_company"
+                android:textSize="14sp"
+                app:endIconDrawable="@drawable/vector_arrow_down"
+                app:endIconMode="custom"
+                app:errorEnabled="true"
+                app:helperText="@string/txt_required"
+                app:helperTextTextColor="#D80027">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:drawableEnd="@drawable/vector_arrow_down"
+                    android:id="@+id/et_company_country"
+                    android:layout_width="match_parent"
+                    android:editable="false"
+                    tools:ignore="Deprecated"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lines="1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_company_phone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_company_country"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/nunito"
+                android:hint="@string/company_phone_number"
+                android:textSize="14sp"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:helperText="@string/txt_required"
+                app:helperTextTextColor="#D80027">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_company_phone"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:lines="1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tv_company_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/nunito"
+                android:hint="@string/company_email_address"
+                android:layout_below="@id/tv_company_phone"
+                android:textSize="14sp"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true"
+                app:helperText="@string/txt_required"
+                app:helperTextTextColor="#D80027">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_company_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_company_name"
+                    android:layout_marginTop="6dp"
+                    android:lines="1"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+</LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/contact_info_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="30dp">
+
+            <Button
+                android:id="@+id/company_btn_skip"
+                style="@style/style_btn_white"
+                android:layout_marginVertical="50dp"
+                android:layout_marginEnd="10dp"
+                android:text="Skip now"
+                app:cornerRadius="10dp" />
+
+        <Button
+            android:layout_marginStart="10dp"
+            android:id="@+id/company_btn_next"
+            style="@style/style_btn_green"
+            android:layout_marginVertical="50dp"
+            android:text="@string/txt_save"
+            app:cornerRadius="10dp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

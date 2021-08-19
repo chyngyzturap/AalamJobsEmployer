@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.login.LoginFragment"
+    android:layout_marginHorizontal="30dp">
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_card_view"
+        android:paddingEnd="40dp"
+        android:paddingStart="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textSize="16sp"
+            android:fontFamily="@font/nunito"
+            android:layout_centerHorizontal="true"
+            android:text="@string/txt_login_please_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:id="@+id/tv_title"
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="40dp" />
+
+        <RelativeLayout
+            android:layout_below="@id/tv_title"
+            android:id="@+id/username_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/phone_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+
+                    android:layout_toEndOf="@id/et_phone_code"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:endIconMode="clear_text"
+                    app:errorEnabled="true"
+                    android:id="@+id/tv_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:layout_below="@id/tv_title"
+                        android:hint="@string/txt_register_phonenumber"
+                        android:inputType="phone"
+                        android:textSize="14sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.hbb20.CountryCodePicker
+                    app:ccp_arrowSize="12dp"
+                    android:id="@+id/et_phone_code"
+                    android:lines="1"
+                    android:inputType="phone"
+                    app:ccp_textSize="14sp"
+                    android:layout_marginTop="14dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_defaultNameCode="KG"
+                    app:ccp_showNameCode="false"
+                    android:fontFamily="@font/nunito"
+                    />
+
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:visibility="gone"
+                android:id="@+id/tv_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconMode="clear_text"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/your_email"
+                    android:inputType="textEmailAddress"
+                    android:textSize="14sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/login_container"
+            android:layout_below="@id/username_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_alignParentEnd="true"
+                android:textSize="12sp"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_centerHorizontal="true"
+                android:text="@string/login_with_email"
+                android:layout_marginBottom="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_login_with_email" />
+            <TextView
+                android:visibility="gone"
+                android:layout_alignParentEnd="true"
+                android:textSize="12sp"
+                android:fontFamily="@font/nunito_bold"
+                android:layout_centerHorizontal="true"
+                android:text="@string/login_with_phone"
+                android:layout_marginBottom="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_login_with_phone" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_container"
+            android:layout_marginTop="-17dp"
+            app:endIconMode="password_toggle"
+            app:errorEnabled="true">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/txt_login_password"
+                android:inputType="textPassword"
+                android:textSize="14sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/tv_password"
+            android:textSize="12sp"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_centerHorizontal="true"
+            android:text="@string/forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_forgot_password" />
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/tv_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:id="@+id/btn_container"
+            >
+
+            <Button
+                android:id="@+id/buttonLogin"
+                android:text="@string/txt_register_login"
+                app:cornerRadius="10dp"
+                style="@style/style_btn_green"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_container"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:textSize="14sp"
+                android:fontFamily="@font/nunito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_login_don_have_acc"
+                android:id="@+id/txt_ask"/>
+
+            <TextView
+                android:textStyle="bold"
+                android:layout_marginStart="2dp"
+                android:id="@+id/tv_signup"
+                android:textColor="@color/colorGreenBrand"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nunito_bold"
+                android:text="@string/txt_splash_btn_register"
+                android:layout_marginBottom="60dp"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

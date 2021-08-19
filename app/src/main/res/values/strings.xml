@@ -1,3 +1,260 @@
 <resources>
     <string name="app_name">Aalam Jobs Employer</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_splash_noaccount">Continue without an account</string>
+    <string name="txt_splash_btn_register">Register</string>
+    <string name="txt_splash_btn_login">Login</string>
+    <string name="jobs_text">talents</string>
+    <string name="favorites_text">favorites</string>
+    <string name="applied_text">selected</string>
+    <string name="resume_text">my vacancies</string>
+    <string name="profile_text">profile</string>
+    <string name="txt_register_login">Login</string>
+    <string name="text_register_alreadyamember">Already a member?</string>
+    <string name="text_register_underbutton">You will get One Time Password via SMS</string>
+    <string name="txt_register_password">Create password</string>
+    <string name="txt_register_phonenumber">Phone number</string>
+    <string name="txt_register_role">Select role</string>
+    <string name="txt_register_please_sign_up">Please Sign Up</string>
+    <string name="btn_register_getotp">Get OTP</string>
+    <string name="txt_otp_title">Please enter the OTP to verify your Account</string>
+    <string name="txt_otp_undertitle">OTP (One Time Password) has been send to +996(XXX)XXXXXX</string>
+    <string name="btn_otp_validate">Validate</string>
+    <string name="txt_login_password">Password</string>
+
+    <string name="txt_choose_lang">Please, choose a language</string>
+    <string name="txt_login_please_login">Please Login</string>
+    <string name="txt_login_don_have_acc">Don\'t have an account?</string>
+    <string name="txt_login_sign_up">Sign up</string>
+    <string name="txt_search">search</string>
+    <string name="btn_profile_my_cv">My CV</string>
+    <string name="txt_settings">Settings</string>
+    <string name="txt_language">Language</string>
+    <string name="txt_about_us">About Us</string>
+    <string name="txt_change_password">Change Password</string>
+    <string name="txt_contact_us">Contact Us</string>
+    <string name="txt_help">Help</string>
+    <string name="txt_logout">Logout</string>
+    <string name="txt_position">Position:</string>
+    <string name="txt_schedule">Schedule:</string>
+    <string name="txt_salary">Salary:</string>
+    <string name="txt_description">Description:</string>
+    <string name="txt_responsibilities">Responsibilities:</string>
+    <string name="txt_requirements">Requirements:</string>
+    <string name="txt_send_cv">Send CV</string>
+    <string name="txt_job_requirements">Job Requirements</string>
+    <string name="txt_salary_expectations">Salary expectations</string>
+    <string name="e_g_2000">e.g. 2000</string>
+    <string name="txt_type_of_work">Type of work:</string>
+    <string name="txt_position_you_would_like_to_work">Position you would like to work</string>
+    <string name="txt_position_you_would_like_to_work_2">Position you would like to work</string>
+    <string name="txt_the_earliest_date_you_can_start_working">The earliest date you can start working</string>
+    <string name="txt_01_07_2021">01-07-2021</string>
+    <string name="txt_i_have_a_computer">I have a computer</string>
+    <string name="txt_i_need_a_computer">I need a computer</string>
+    <string name="txt_profile_information">Profile information</string>
+    <string name="txt_you_have_1000_symbols">You have 1000 symbols</string>
+    <string name="txt_save">Save</string>
+    <string name="txt_work_experience">Work Experience</string>
+    <string name="txt_company">Company</string>
+    <string name="txt_company2">Company name</string>
+    <string name="txt_date_from">Date from</string>
+    <string name="txt_dd_mm_yyyy">DD-MM-YYYY</string>
+    <string name="txt_date_to">Date to</string>
+    <string name="txt_position2">Position</string>
+    <string name="txt_position3">Position</string>
+    <string name="txt_responsibilities2">Responsibilities</string>
+    <string name="txt_if_you_have_few_divide_by_comma">If you have few, divide by comma</string>
+    <string name="txt_achievements">Achievements</string>
+    <string name="txt_date_name_location_certificate">Date, Name, Location, Certificate</string>
+    <string name="txt_links">Links</string>
+    <string name="txt_links_2">Links</string>
+    <string name="txt_native_language">Native language</string>
+    <string name="txt_native_language_2">Native language</string>
+    <string name="txt_other_languages">Other languages</string>
+    <string name="txt_other_languages_2">Other languages</string>
+    <string name="txt_talking">Talking:</string>
+    <string name="txt_speaking">Listening:</string>
+    <string name="txt_reading">Reading:</string>
+    <string name="txt_writing">Writing:</string>
+    <string name="txt_education">Education</string>
+    <string name="txt_education2">Education</string>
+    <string name="txt_educational_institution">Educational institution</string>
+    <string name="txt_click_here_to_choose_file">Click here to choose file</string>
+    <string name="txt_next">Next</string>
+    <string name="txt_contact_information">Contact Information</string>
+    <string name="txt_phone">Phone</string>
+    <string name="txt_email">"Email "</string>
+    <string name="txt_current_country">Current country</string>
+    <string name="txt_current_country_2">Current country</string>
+    <string name="txt_current_city">Current city</string>
+    <string name="txt_current_city2">Current city</string>
+    <string name="txt_address">Living Address</string>
+    <string name="living_address">Living Address</string>
+    <string name="txt_personal_information">Personal Information</string>
+    <string name="txt_first_name">First name</string>
+    <string name="txt_last_name">Last Name</string>
+    <string name="txt_middle_name">Middle Name/Father’s Name</string>
+    <string name="txt_birth_date">Birth Date</string>
+    <string name="txt_citizenship">Citizenship</string>
+    <string name="txt_citizenship2">Citizenship</string>
+    <string name="txt_gender">"Gender "</string>
+    <string name="txt_female">Female</string>
+    <string name="txt_male">Male</string>
+    <string name="txt_marital_status">Marital status</string>
+    <string name="txt_add_experience">Add an another work experience</string>
+    <string name="txt_add_language">Add an another language</string>
+    <string name="txt_add_edit">Edit Profile Information</string>
+
+    <string name="txt_logout_before">Are you sure you want to logout?</string>
+    <string name="txt_logout_before_remind">We can\'t notify you of new jobs if you do</string>
+    <string name="txt_choose_language">Choose Language</string>
+    <string name="txt_required">Required*</string>
+    <string name="txt_skills">Skills</string>
+    <string name="tab_personals">Personal Info</string>
+    <string name="tab_contacts">Contact Info</string>
+    <string name="tab_education">Education</string>
+    <string name="tab_language">Language</string>
+    <string name="tab_experience">Experience</string>
+    <string name="tab_job_requirements">Requirements</string>
+    <string name="txt_job_application_form">Job Application Form</string>
+    <string name="specialization">Specialization</string>
+    <string name="city">City</string>
+    <string name="country">Country</string>
+    <string name="links">Links</string>
+    <string name="links_related_to_your_work_experience_optional">Links related to your work experience (optional)</string>
+    <string name="full_name">Full name</string>
+    <string name="save_pdf_print">Save PDF / Print</string>
+    <string name="clear_all">Clear All</string>
+    <string name="city2">City</string>
+    <string name="industry">Industry</string>
+    <string name="speciality">Speciality</string>
+    <string name="salary2">Salary</string>
+    <string name="employment_type">Employment type</string>
+    <string name="apply">Apply</string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="done">Done</string>
+    <string name="your_full_name">Your Full Name</string>
+    <string name="your_city">Your City</string>
+    <string name="your_country">Your Country</string>
+    <string name="your_position">Your Position</string>
+    <string name="your_email">Your Email</string>
+    <string name="your_phone">Your Phone</string>
+    <string name="enter_your_phone_number_for_the_verification_process_we_will_send_6_digits_code_to_your_number">Enter your phone number for the verification process. We will send 6 digits code to your number.</string>
+    <string name="continue2">Continue</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="resend_one_time_password">Resend One Time Password</string>
+    <string name="entered_a_wrong_number">Entered a wrong number?</string>
+    <string name="city_country">City, country</string>
+    <string name="cancel">Cancel</string>
+    <string name="please_sign_up_to_get_access">Please sign up to get access</string>
+    <string name="company">Company</string>
+    <string name="vacancy">Vacancy</string>
+    <string name="about_vacancy">About Vacancy</string>
+    <string name="company_name">Company Name</string>
+    <string name="industry_e_g_it_hospitality_etc">Industry (e.g. IT. hospitality, etc. )</string>
+    <string name="company_website_if_available">Company website (if available)</string>
+    <string name="company_summary_description_of_the_company_industry_and_type_of_a_workplace">Company summary (description of the company – industry and type of a workplace)</string>
+    <string name="company_street_address">Company street address</string>
+    <string name="city_location_of_company">City (location of company)</string>
+    <string name="country_location_of_company">Country (location of company)</string>
+    <string name="company_phone_number">Company phone number</string>
+    <string name="company_email_address">Company email address</string>
+    <string name="your_company">Your Company</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="your_address">Your address</string>
+    <string name="about_company">About Company</string>
+    <string name="post_new_job">Post New Job</string>
+    <string name="job_title_e_g_receptionist_taxi_driver_etc">Job title (e.g. receptionist, taxi driver, etc. )</string>
+    <string name="job_description_a_big_picture_of_the_job">Job description (a big picture of the job)</string>
+    <string name="speciality_e_g_ios_developer_barista_etc">Speciality (e.g. iOS developer, barista etc. )</string>
+    <string name="what_is_the_planned_start_date">What is the planned start date?</string>
+    <string name="what_is_the_salary_specify_currency">What is the salary (specify currency)?</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="currency">Currency</string>
+    <string name="what_type_of_employment_is_it">What type of employment is it?</string>
+    <string name="payment_method">Payment method</string>
+    <string name="what_are_the_job_responsibilities_describe_everything_the_employee_will_have_to_do">What are the job responsibilities? Describe everything the employee will have to do</string>
+    <string name="what_are_the_job_requirements">What are the job requirements?</string>
+    <string name="schedule_of_job_specify_hours_and_days_of_work">Schedule of job? Specify hours and days of work</string>
+    <string name="is_there_an_application_deadline">Is there an application deadline?</string>
+    <string name="organisation">Organisation</string>
+    <string name="login_with_email">Login with Email</string>
+    <string name="login_with_phone">Login with Phone</string>
+    <string name="please_choose_favorites_from_list"> Please, choose favorites from list</string>
+    <string name="currency2">Currency</string>
+    <string name="please_create_your_own_vacancy"> Please, create your own vacancy</string>
+    <string name="password_numeric">This password is entirely numeric</string>
+    <string name="password_length">Password can\'t be less than 8</string>
+    <string name="already_exist">User with this phone number already exists</string>
+    <string name="please_add_your_organization">Please, add your organization</string>
+    <string name="add_company">Add company</string>
+    <string name="it_seems_you_haven_t_added_your_organization_yet">It seems you haven\'t added your organization yet</string>
+    <string name="has_already">Has already</string>
+    <string name="enter_mobile_number">Enter mobile number</string>
+    <string name="pwd_changed_success">Congratulations! Your password is successfully changed</string>
+    <string name="pwd_mismatch">Passwords mismatch</string>
+    <string name="invalid_otp">Invalid OTP</string>
+    <string name="pwd_changed_succ">Password changed successfully</string>
+    <string name="choose_lang">Choose Language</string>
+    <string name="job_not_found">Job not found</string>
+    <string name="share_via">Share via…</string>
+    <string name="add_your_company">Add Your Company</string>
+    <string name="retry">Retry</string>
+    <string name="check_internet_connect">Please check your internet connection</string>
+    <string name="incorrect_email_pwd">You\'ve entered incorrect email or password</string>
+
+    <string-array name="marital_status">
+        <item>Single</item>
+        <item>Married</item>
+        <item>Divorced</item>
+        <item>Widow</item>
+    </string-array>
+
+    <string-array name="phone_code">
+        <item>+996</item>
+    </string-array>
+
+    <string-array name="role">
+        <item>E</item>
+        <item>R</item>
+        <item>A</item>
+        <item>O</item>
+    </string-array>
+
+    <string-array name="type_of_work">
+        <item>Full time</item>
+        <item>Part time</item>
+        <item>Full time Seasonal</item>
+        <item>Part time Seasonal</item>
+        <item>Contract</item>
+    </string-array>
+
+    <string-array name="type_of_work_2">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="lang_skills">
+        <item>No proficiency</item>
+        <item>Elementary</item>
+        <item>Intermediate</item>
+        <item>Professional</item>
+        <item>Advanced</item>
+    </string-array>
+
+    <string-array name="currency">
+        <item>USD</item>
+        <item>TRL</item>
+        <item>KGS</item>
+        <item>RUB</item>
+    </string-array>
+
 </resources>

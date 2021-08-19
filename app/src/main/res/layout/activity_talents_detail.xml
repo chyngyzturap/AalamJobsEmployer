@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.talents.TalentDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/jobs_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="5dp">
+
+        <ImageView
+            android:id="@+id/auth_toolbar_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_green"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/iv_backpressed"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_backpressed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:padding="8dp"
+            android:src="@drawable/vector_backpressed_green"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_marginEnd="20dp"
+            android:id="@+id/iv_share"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="20dp"
+            android:src="@drawable/vector_share_darkgreen"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/auth_toolbar_title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="60dp"
+        app:layout_editor_absoluteX="1dp"
+        app:layout_editor_absoluteY="1dp"
+        android:layout_below="@id/jobs_toolbar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <RelativeLayout
+            android:id="@+id/job_detail_top_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_photo_talent"
+                android:scaleType="centerCrop"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:civ_border_color="@color/transparent"
+                app:civ_border_width="2dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/vector_no_logo" />
+
+            <RelativeLayout
+                android:id="@+id/job_head_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_photo_talent">
+
+                <TextView
+                    android:id="@+id/talent_full_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito"
+                    android:text=""
+                    android:textColor="#5A5A67"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:id="@+id/job_location_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/talent_full_name"
+                    android:layout_marginTop="6dp">
+
+                    <TextView
+                        android:id="@+id/talent_position"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito"
+                        android:text=""
+                        android:textColor="#5A5A67"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/talent_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/talent_position"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/nunito"
+                        android:text=""
+                        android:textColor="#5A5A67"
+                        android:textSize="10sp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/job_date_container"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+               >
+
+                <TextView
+                    android:id="@+id/talent_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/iv_talent_favorite"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="26dp"
+                    android:fontFamily="@font/nunito"
+                    android:text=""
+                    android:textColor="#F3A683"
+                    android:textSize="11sp" />
+
+
+                <ImageView
+                    android:id="@+id/iv_talent_favorite"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:padding="25dp"
+            android:background="@drawable/bg_card_view"
+            android:id="@+id/talent_description_container"
+            android:layout_width="250dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/job_detail_top_container"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="65dp">
+
+<TextView
+    android:layout_centerHorizontal="true"
+    android:text="View CV"
+    android:textSize="14sp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tv_view_cv_title"
+    android:fontFamily="@font/nunito_bold"/>
+
+            <ImageView
+                android:layout_marginTop="35dp"
+                android:layout_below="@id/tv_view_cv_title"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/vector_docs"
+                android:id="@+id/iv_cv_file"
+                android:layout_width="35dp"
+                android:layout_height="45dp"/>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_send_cv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Send email"
+            android:textAllCaps="false"
+            android:textColor="@color/colorGreenBrand2"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</RelativeLayout>

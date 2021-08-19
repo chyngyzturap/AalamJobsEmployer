@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <ImageView
+        android:scaleType="fitStart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/bg_settings_green" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profile_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:elevation="5dp">
+
+        <ImageView
+            android:id="@+id/iv_backpressed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:padding="8dp"
+            android:src="@drawable/vector_backpressed_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:fontFamily="@font/nunito"
+            android:text="@string/txt_settings"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/iv_backpressed"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/settings_profile_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_toolbar"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile_settings"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <TextView
+            android:id="@+id/tv_settings_profile_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/iv_profile_settings"
+            android:fontFamily="@font/nunito"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/settings_container"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settings_profile_container"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bg_settings"
+        android:paddingHorizontal="20dp">
+
+        <LinearLayout
+            android:id="@+id/settings_container_lang"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#7A7A7A"
+                android:id="@+id/tv_settings_language"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:fontFamily="@font/nunito"
+                android:gravity="center_vertical"
+                android:text="@string/txt_language"
+                android:textSize="19sp"
+                app:drawableRightCompat="@drawable/vector_arrow_right" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_settings_language"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/browser_actions_bg_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settings_container_about_us"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#7A7A7A"
+                android:id="@+id/tv_settings_about_us"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/tv_settings_language"
+                android:fontFamily="@font/nunito"
+                android:gravity="center_vertical"
+                android:text="@string/txt_about_us"
+                android:textSize="19sp"
+                app:drawableRightCompat="@drawable/vector_arrow_right" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_settings_about_us"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/browser_actions_bg_grey" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settings_container_change_pwd"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#7A7A7A"
+                android:id="@+id/tv_settings_change_password"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/tv_settings_about_us"
+                android:fontFamily="@font/nunito"
+                android:gravity="center_vertical"
+                android:text="@string/txt_change_password"
+                android:textSize="19sp"
+                app:drawableRightCompat="@drawable/vector_arrow_right" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_settings_change_password"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/browser_actions_bg_grey" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/settings_container_contact_us"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#7A7A7A"
+                android:id="@+id/tv_settings_contact_us"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/tv_settings_change_password"
+                android:fontFamily="@font/nunito"
+                android:gravity="center_vertical"
+                android:text="@string/txt_contact_us"
+                android:textSize="19sp"
+                app:drawableRightCompat="@drawable/vector_arrow_right" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_settings_contact_us"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/browser_actions_bg_grey" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/settings_container_help"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#7A7A7A"
+                android:id="@+id/tv_settings_help"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/tv_settings_contact_us"
+                android:fontFamily="@font/nunito"
+                android:gravity="center_vertical"
+                android:text="@string/txt_help"
+                android:textSize="19sp"
+                app:drawableRightCompat="@drawable/vector_arrow_right" />
+
+            <View
+                android:id="@+id/view_help"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tv_settings_help"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/browser_actions_bg_grey" />
+        </LinearLayout>
+        <TextView
+            android:textColor="#7A7A7A"
+            android:id="@+id/tv_settings_Logout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/tv_settings_help"
+            android:fontFamily="@font/nunito"
+            android:gravity="center_vertical"
+            android:text="@string/txt_logout"
+            android:textSize="19sp"
+            app:drawableRightCompat="@drawable/vector_arrow_right" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
