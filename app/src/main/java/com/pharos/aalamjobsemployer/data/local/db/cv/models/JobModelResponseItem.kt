@@ -5,7 +5,7 @@ import com.pharos.aalamjobsemployer.ui.talents.model.*
 import com.pharos.aalamjobsemployer.ui.talents.model.Salary
 
 data class JobModelResponseItem(
-    val city: City,
+    val city: Int,
     val deadline: String,
     val deadline_string: String,
     val description: String,

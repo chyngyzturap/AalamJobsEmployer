@@ -41,7 +41,7 @@ class SplashActivity : BaseActivity<AuthViewModel, ActivitySplashBinding, AuthRe
 
     private fun showCurrent() {
         val token = runBlocking { userPreferences.tokenAccess.first() }
-        if (token.isNullOrEmpty()) {
+        if (token.isNullOrEmpty() || token == "") {
             setContentView(R.layout.activity_splash)
         } else {
             val intent = Intent(this, MainActivity::class.java)

@@ -220,17 +220,18 @@ class CompanyInfoFragment : BaseFragment<JobViewModel, FragmentCompanyInfoBindin
                         .insertCompanyInfo(company)
                 }
             }
+            val token = runBlocking { userPreferences.tokenAccess.first() }
+            if (token.isNullOrEmpty() || token == "") {
+                findNavController().navigate(R.id.nav_register)
+            } else {
+                findNavController().navigate(R.id.nav_resume)
+            }
         }
         goToCurrent()
     }
 
     private fun goToCurrent() {
-        val token = runBlocking { userPreferences.tokenAccess.first() }
-        if (token.isNullOrEmpty()) {
-            findNavController().navigate(R.id.nav_register)
-        } else {
-            findNavController().navigate(R.id.nav_resume)
-        }
+
     }
 
     override fun createCompanyFailed(code: Int?) {

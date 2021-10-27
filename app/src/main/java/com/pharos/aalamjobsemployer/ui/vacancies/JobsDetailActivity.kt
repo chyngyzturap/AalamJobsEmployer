@@ -79,8 +79,8 @@ class JobsDetailActivity : BaseActivity<JobViewModel, ActivityJobsDetailBinding,
         binding.tvRequirements.text = reqText
         binding.jobTitle.text = jobs.title
         binding.jobNameCompany.text = jobs.organization.name
-        binding.jobNameLocation.text = jobs.city.name.en.toString() + ", " +
-                jobs.city.country.name.en
+//        binding.jobNameLocation.text = jobs.city.name.en.toString() + ", " +
+//                jobs.city.country.name.en
         binding.jobsDate.text = jobs.published_date.split("T")[0]
         binding.tvPosition.text = jobs.position
         binding.tvSchedule.text = jobs.schedule

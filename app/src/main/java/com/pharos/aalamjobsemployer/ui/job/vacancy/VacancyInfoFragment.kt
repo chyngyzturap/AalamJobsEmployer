@@ -63,6 +63,7 @@ class VacancyInfoFragment :
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.setUserDataListener(this)
+        viewModel.setJobListener(this)
         viewModel.getUserData()
 
         launch {
@@ -213,8 +214,6 @@ class VacancyInfoFragment :
                 )
 
                 viewModel.createNewJob(jobModel!!)
-
-
 
             } else {
                 if (city != 0) {
